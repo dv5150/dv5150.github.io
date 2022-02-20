@@ -11346,10 +11346,6 @@ p {
 }
 
 @media screen and (max-width: 1200px) {
-  .details {
-    top: 90%;
-  }
-
   h2, .h2 {
     font-size: 2.5em;
   }
