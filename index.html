@@ -7,7 +7,74 @@
 </head>
 <body>
 <div id="app">
-    <app></app>
+    <div class="sections-menu">
+      <span
+              class="menu-point"
+              v-bind:class="{active: activeSection == index}"
+              v-on:click="scrollToSection(index)"
+              v-for="(offset, index) in offsets"
+              v-bind:key="index">
+      </span>
+    </div>
+    <section class="fullpage" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('/img/nagy-norbi.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="details">
+            <h2>Nagy Norbi</h2>
+            <p>
+                <i class="fa-brands fa-youtube" style="color: red;"></i>
+                <a href="https://www.youtube.com/watch?v=bOqBtZ1IO5E" target="_blank">
+                    Téveszme - Az Aranysóvár Leckéje
+                </a>
+            </p>
+        </div>
+    </section>
+    <section class="fullpage" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('/img/tomasovszki-zoli.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="details">
+            <h2>Tomasovszki Zoli</h2>
+            <p>
+                <i class="fa-brands fa-youtube" style="color: red;"></i>
+                <a href="https://www.youtube.com/watch?v=299Zk7WQ28w" target="_blank">
+                    PETOFI - Hórusz
+                </a>
+            </p>
+        </div>
+    </section>
+    <section class="fullpage" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('/img/szalkai-tibi.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="details">
+            <h2>Szalkai Tibi</h2>
+            <p>
+                <i class="fa-brands fa-youtube" style="color: red;"></i>
+                <a href="https://www.youtube.com/watch?v=okHsyhgdY5E" target="_blank" style="margin-right: 1rem">
+                    USEME - Ami Felkavar
+                </a>
+                <i class="fa-brands fa-youtube" style="color: red;"></i>
+                <a href="https://www.youtube.com/watch?v=KpuWLt8QY3E" target="_blank">
+                    The Idoru - Monochrome
+                </a>
+            </p>
+        </div>
+    </section>
+    <section class="fullpage" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('/img/maczonkai-geza.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="details">
+            <h2>Maczonkai Géza</h2>
+            <p>
+                <i class="fa-brands fa-youtube" style="color: red;"></i>
+                <a href="https://www.youtube.com/watch?v=COmyDrzkDsQ" target="_blank">
+                    Paddy and the Rats - Bound By Blood
+                </a>
+            </p>
+        </div>
+    </section>
+    <section class="fullpage" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('/img/ian-dsa.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="details">
+            <h2>Ian D'Sa</h2>
+            <p>
+                <i class="fa-brands fa-youtube" style="color: red;"></i>
+                <a href="https://www.youtube.com/watch?v=Nq1MTaw2X6s" target="_blank">
+                    Billy Talent - Reckless Paradise
+                </a>
+            </p>
+        </div>
+    </section>
 </div>
 <script src="js/app.js"></script>
 </body>
