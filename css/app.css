@@ -11316,3 +11316,64 @@ body {
   opacity: 1;
   transform: scale(1.5);
 }
+
+.nagy-norbi {
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0)), url("/img/nagy-norbi.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 991.98px) {
+  .nagy-norbi {
+    background-position: 58%;
+  }
+}
+.tomasovszki-zoli {
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0)), url("/img/tomasovszki-zoli.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 991.98px) {
+  .tomasovszki-zoli {
+    background-position: 26%;
+  }
+}
+.szalkai-tibi {
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0)), url("/img/szalkai-tibi.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 991.98px) {
+  .szalkai-tibi {
+    background-position: 28%;
+  }
+}
+.maczonkai-geza {
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0)), url("/img/maczonkai-geza.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 991.98px) {
+  .maczonkai-geza {
+    background-position: 32%;
+  }
+}
+.ian-dsa {
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0)), url("/img/ian-dsa.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 991.98px) {
+  .ian-dsa {
+    background-position: 29%;
+  }
+}
