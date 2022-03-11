@@ -8,38 +8,10 @@ body {
   overflow: hidden;
 }
 
-h3 {
-  position: fixed;
-}
-
 .fullpage {
   height: 100vh;
   width: 100%;
   display: flex;
-}
-
-.details {
-  position: relative;
-  top: 85%;
-  margin: 0;
-  text-align: left;
-  padding: 0 3rem;
-}
-
-h2 {
-  font-size: 5em;
-}
-
-p {
-  font-size: 1em;
-}
-
-.fullpage a {
-  text-decoration: none;
-  font-weight: 600;
-  padding: 5px 10px;
-  color: #FFF;
-  margin-left: 5px;
 }
 
 .sections-menu {
@@ -63,10 +35,4 @@ p {
 .sections-menu .menu-point.active {
   opacity: 1;
   transform: scale(1.5);
-}
-
-@media screen and (max-width: 1200px) {
-  h2 {
-    font-size: 2.5em;
-  }
 }
