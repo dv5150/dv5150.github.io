@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(/src/fonts/Montserrat-Regular.woff2?58a8d7ebc386843b62c53592b03d09b1) format("woff2");
+}
+@font-face {
+  font-family: "Montserrat Thin";
+  src: url(/src/fonts/Montserrat-Thin.woff2?483aa3e18a5558acdee21f088389e181) format("woff2");
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(/src/fonts/Montserrat-Bold.woff2?0af89c10df9bc2f8d646e501ce7045b9) format("woff2");
+}
+* {
+  font-family: Montserrat, serif;
+}

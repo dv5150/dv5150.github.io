@@ -10,6 +10,13 @@ services:
       - "127.0.0.1:8080:8080"
     restart: unless-stopped
 
+  node:
+    image: node:21-alpine
+    tty: true
+    volumes:
+      - ./:/var/www
+    restart: unless-stopped
+
   build:
     build:
       context: ./php

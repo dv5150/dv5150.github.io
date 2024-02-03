@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "2.0.0",
+  "author": "David Szabados <dv5150dev@gmail.com>",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.70.0",
+    "sass-loader": "^12.6.0",
+    "vue-loader": "^16.8.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "vue": "^3.4.15"
+  },
+  "scripts": {
+    "dev": "npx mix watch"
+  }
+}

@@ -1,160 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+
+<html lang="en">
 
 <head>
     <meta charset="UTF-8"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="David Szabados, PHP (Laravel) developer">
+    <meta name="description" content="David Szabados, Laravel Developer">
+
     <meta name="og:title" property="og:title" content="David Szabados">
-    <meta name="og:description" property="og:description" content="David Szabados, PHP (Laravel) developer">
+    <meta name="og:description" property="og:description" content="David Szabados, Laravel Developer">
+
     <meta name="og:image" property="og:image" content="https://dv5150.github.io/img/david-szabados.jpg">
-    <meta name="og:image:secure_url" property="og:image:secure_url"
-          content="https://dv5150.github.io/img/david-szabados.jpg">
+    <meta name="og:image:secure_url" property="og:image:secure_url" content="https://dv5150.github.io/img/david-szabados.jpg">
     <meta name="og:image:alt" property="og:image:alt" content="David Szabados">
+
     <title>David Szabados | Portfolio</title>
+
+    <link rel="stylesheet" href="dist/build.css">
 </head>
+<body>
+<div id="app"></div>
+<!--<div>-->
 
-<body class="bg-slate-100 dark:bg-slate-700">
+<!--    <div id="profile">-->
+<!--        <div>-->
+<!--            <div style="background-image: url('img/david-szabados.webp');"></div>-->
+<!--            <h1>David Szabados <span id="age"></span></h1>-->
+<!--            <p>-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">-->
+<!--                    <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z"></path>-->
+<!--                </svg>-->
+<!--                Laravel Developer-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">-->
+<!--                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z"></path>-->
+<!--                </svg>-->
+<!--                Győr, Hungary-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <strong>About me</strong> <br>-->
+<!--                Software engineer, amateur musician, rabbit and video game enthusiast, who is building websites since 2016 and breaking guitar strings since 2009.-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <strong>My favorite stack contains</strong> <br>-->
+<!--                Laravel, Docker, Vue JS, Pinia, Tailwind, PHPStorm-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <strong>Other fancy buzzwords I'm more or less familiar with</strong> <br>-->
+<!--                REST API, MySQL, Git, Forge, Redis, ElasticSearch, MailHog, Nginx, Bootstrap, VSCode-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <strong>Find me on</strong>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <a href="https://github.com/dv5150" target="_blank" data-tippy-content="@github_handle">-->
+<!--                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title>-->
+<!--                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>-->
+<!--                </svg>-->
+<!--            </a><a href="https://youtube.com/@dv5150" target="_blank"-->
+<!--                   data-tippy-content="@youtube_handle">-->
+<!--                <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>YouTube</title>-->
+<!--                    <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path>-->
+<!--                </svg>-->
+<!--            </a><a href="https://spoti.fi/3YKolvJ" target="_blank"-->
+<!--                   data-tippy-content="@spotify_handle">-->
+<!--                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spotify</title>-->
+<!--                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path>-->
+<!--                </svg>-->
+<!--            </a><a href="https://www.last.fm/user/DavidFreeman777/library/artists?date_preset=ALL"-->
+<!--                   target="_blank" data-tippy-content="@lastfm_handle">-->
+<!--                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Last.fm</title>-->
+<!--                    <path d="M10.584 17.21l-.88-2.392s-1.43 1.594-3.573 1.594c-1.897 0-3.244-1.649-3.244-4.288 0-3.382 1.704-4.591 3.381-4.591 2.42 0 3.189 1.567 3.849 3.574l.88 2.749c.88 2.666 2.529 4.81 7.285 4.81 3.409 0 5.718-1.044 5.718-3.793 0-2.227-1.265-3.381-3.63-3.931l-1.758-.385c-1.21-.275-1.567-.77-1.567-1.595 0-.934.742-1.484 1.952-1.484 1.32 0 2.034.495 2.144 1.677l2.749-.33c-.22-2.474-1.924-3.492-4.729-3.492-2.474 0-4.893.935-4.893 3.932 0 1.87.907 3.051 3.189 3.601l1.87.44c1.402.33 1.869.907 1.869 1.704 0 1.017-.99 1.43-2.86 1.43-2.776 0-3.93-1.457-4.59-3.464l-.907-2.75c-1.155-3.573-2.997-4.893-6.653-4.893C2.144 5.333 0 7.89 0 12.233c0 4.18 2.144 6.434 5.993 6.434 3.106 0 4.591-1.457 4.591-1.457z"></path>-->
+<!--                </svg>-->
+<!--            </a><a href="https://www.facebook.com/dv5150fb/" target="_blank"-->
+<!--                   data-tippy-content="@facebook_handle">-->
+<!--                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title>-->
+<!--                    <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"></path>-->
+<!--                </svg>-->
+<!--            </a></p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <img src="img/david-szabados.webp" alt="David Szabados">-->
+<!--    </div>-->
 
-<div class="w-100 2xl:w-1/2 flex flex-wrap items-center mx-auto pt-16 pb-8 lg:py-6 bg-slate-100 dark:bg-slate-700">
-    <div class="absolute top-0 right-0 h-12 w-18 p-6">
-        <button class="js-change-theme focus:outline-none" onclick="toggleDarkMode()">🌙</button>
-    </div>
-    <div id="profile"
-         class="w-full lg:w-3/5 rounded-r-lg lg:rounded-r-none rounded-l-lg shadow-xl bg-white dark:bg-slate-800 mx-4 lg:mx-0 my-6">
-        <div class="p-4 lg:pl-6 lg:py-8 text-center lg:text-left">
-            <div class="block lg:hidden rounded-l-lg rounded-r-lg lg:rounded-l-none lg:rounded-r-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
-                 style="background-image: url('img/david-szabados.webp');"></div>
-            <h1 class="text-3xl font-bold pt-8 lg:pt-0 text-black dark:text-slate-300">David Szabados <span
-                    class="text-sm" id="age"></span></h1>
-            <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b border-b-slate-300 dark:border-b-slate-600"></div>
-            <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start text-indigo-600 dark:text-indigo-400">
-                <svg class="h-4 fill-current text-indigo-600 dark:text-indigo-400 pr-4"
-                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z"></path>
-                </svg>
-                Laravel Developer
-            </p>
-            <p class="pt-2 pb-3 text-indigo-600 dark:text-indigo-400 text-sm flex items-center justify-center lg:justify-start">
-                <svg class="h-4 fill-current text-indigo-400 dark:text-indigo-400 pr-4"
-                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z"></path>
-                </svg>
-                Győr, Hungary
-            </p>
-            <p class="text-sm my-3 text-black dark:text-slate-300"><strong>About me</strong> <br> Software engineer,
-                amateur musician, rabbit and video game enthusiast, who is building websites since 2016 and breaking
-                guitar strings since 2009. </p>
-            <p class="text-sm my-3 text-black dark:text-slate-300"><strong>My favorite stack contains</strong> <br>
-                Laravel, Docker, Vue JS, Pinia, Tailwind, PHPStorm </p>
-            <p class="text-sm my-3 text-black dark:text-slate-300"><strong>Other fancy buzzwords I'm more or less
-                familiar with</strong> <br> REST API, MySQL, Git, Forge, Redis, ElasticSearch, MailHog, Nginx,
-                Bootstrap, VSCode </p>
-            <p class="mt-6 text-black dark:text-slate-300"><strong>Find me on</strong></p>
-            <p class="text-center inline-flex gap-5 mt-3"><a class="link" href="https://github.com/dv5150"
-                                                             target="_blank" data-tippy-content="@github_handle">
-                <svg class="h-6 fill-current text-gray-600 dark:text-slate-300 hover:text-black dark:hover:text-white"
-                     role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title>
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-                </svg>
-            </a><a class="link" href="https://youtube.com/@dv5150" target="_blank"
-                   data-tippy-content="@youtube_handle">
-                <svg class="h-6 fill-current text-gray-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-600"
-                     role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>YouTube</title>
-                    <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path>
-                </svg>
-            </a><a class="link" href="https://spoti.fi/3YKolvJ" target="_blank"
-                   data-tippy-content="@spotify_handle">
-                <svg class="h-6 fill-current text-gray-600 dark:text-slate-300 hover:text-green-500 dark:hover:text-green-500"
-                     role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spotify</title>
-                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path>
-                </svg>
-            </a><a class="link" href="https://www.last.fm/user/DavidFreeman777/library/artists?date_preset=ALL"
-                   target="_blank" data-tippy-content="@lastfm_handle">
-                <svg class="h-6 fill-current text-gray-600 dark:text-slate-300 hover:text-red-500 dark:hover:text-red-500"
-                     role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Last.fm</title>
-                    <path d="M10.584 17.21l-.88-2.392s-1.43 1.594-3.573 1.594c-1.897 0-3.244-1.649-3.244-4.288 0-3.382 1.704-4.591 3.381-4.591 2.42 0 3.189 1.567 3.849 3.574l.88 2.749c.88 2.666 2.529 4.81 7.285 4.81 3.409 0 5.718-1.044 5.718-3.793 0-2.227-1.265-3.381-3.63-3.931l-1.758-.385c-1.21-.275-1.567-.77-1.567-1.595 0-.934.742-1.484 1.952-1.484 1.32 0 2.034.495 2.144 1.677l2.749-.33c-.22-2.474-1.924-3.492-4.729-3.492-2.474 0-4.893.935-4.893 3.932 0 1.87.907 3.051 3.189 3.601l1.87.44c1.402.33 1.869.907 1.869 1.704 0 1.017-.99 1.43-2.86 1.43-2.776 0-3.93-1.457-4.59-3.464l-.907-2.75c-1.155-3.573-2.997-4.893-6.653-4.893C2.144 5.333 0 7.89 0 12.233c0 4.18 2.144 6.434 5.993 6.434 3.106 0 4.591-1.457 4.591-1.457z"></path>
-                </svg>
-            </a><a class="link" href="https://www.facebook.com/dv5150fb/" target="_blank"
-                   data-tippy-content="@facebook_handle">
-                <svg class="h-6 fill-current text-gray-600 dark:text-slate-300 hover:text-blue-700 dark:hover:text-blue-700"
-                     role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title>
-                    <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"></path>
-                </svg>
-            </a></p>
-        </div>
-    </div>
-    <div class="w-full lg:w-2/5">
-        <img src="img/david-szabados.webp"
-             class="rounded-none lg:rounded-r-lg shadow-2xl hidden lg:block"
-             alt="David Szabados">
-    </div>
+<!--    <div>-->
+<!--        <div>-->
+<!--            <img src="img/david-szabados-2.webp" alt="David Szabados">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <img src="img/david-szabados-2.webp" alt="David Szabados">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <h5>Guitar Tabs</h5>-->
+<!--            <p>In my free time I write guitar tabs by ear, download them below!</p>-->
+<!--            <ul id="tabList"></ul>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="w-full grid grid-cols-12 bg-white dark:bg-slate-700 my-6 mx-4 lg:mx-0 rounded-lg lg:rounded-l-lg lg:rounded-r-none">
-        <div class="block lg:hidden col-span-12 lg:col-span-4"><img
-                class="w-full h-96 lg:h-auto object-cover object-center rounded-t-lg rounded-b-none"
-                src="img/david-szabados-2.webp" alt="David Szabados"></div>
-        <div class="hidden lg:block col-span-12 lg:col-span-4 bg-slate-100 dark:bg-slate-700"><img
-                class="w-full h-96 lg:h-auto object-cover object-top lg:rounded-none lg:rounded-l-lg"
-                src="img/david-szabados-2.webp" alt="David Szabados"></div>
-        <div class="col-span-12 lg:col-span-8 py-3 px-4 rounded-b-lg lg:rounded-l-lg bg-white dark:bg-slate-800 shadow-xl">
-            <h5 class="text-gray-900 dark:text-slate-300 text-xl font-medium my-2">Guitar Tabs</h5>
-            <p class="text-gray-700 dark:text-slate-300 text-base border-b border-b-slate-300 dark:border-b-slate-600 pb-3">
-                In my free time I write guitar tabs by ear, download them below! </p>
-            <ul class="w-100 space-y-2 my-4 columns-1 sm:columns-2" id="tabList"></ul>
-        </div>
-    </div>
-</div>
+<!--</div>-->
 
-<script src="js/tailwind3.3.3.js"></script>
+<!--<script type="text/javascript">-->
+<!--    let age = Math.abs(-->
+<!--        new Date(Date.now() - new Date("05/13/1992").getTime()).getUTCFullYear() - 1970-->
+<!--    )-->
 
-<script type="text/javascript">
-    let age = Math.abs(
-        new Date(Date.now() - new Date("05/13/1992").getTime()).getUTCFullYear() - 1970
-    )
+<!--    document.querySelector('#age').innerHTML = `(${age})`-->
 
-    document.querySelector('#age').innerHTML = `(${age})`
-
-    fetch('./tablist.json')
-        .then((response) => response.json())
-        .then((json) => {
-            for (const key in json) {
-                addTab(key, json[key])
-            }
-        })
-
-    function addTab (file, title) {
-        let tabListElement = document.querySelector('#tabList')
-
-        tabListElement.innerHTML = tabListElement.innerHTML + `
-            <li class="flex items-center w-100">
-                <svg class="w-5 h-4 mr-1.5 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path xmlns="http://www.w3.org/2000/svg" d="M12 10V20M12 20L9.5 17.5M12 20L14.5 17.5"
-                          stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round"></path>
-                    <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
-                          d="M6.3218 7.05726C7.12925 4.69709 9.36551 3 12 3C14.6345 3 16.8708 4.69709 17.6782 7.05726C19.5643 7.37938 21 9.02203 21 11C21 13.2091 19.2091 15 17 15H16C15.4477 15 15 14.5523 15 14C15 13.4477 15.4477 13 16 13H17C18.1046 13 19 12.1046 19 11C19 9.89543 18.1046 9 17 9C16.9776 9 16.9552 9.00037 16.9329 9.0011C16.4452 9.01702 16.0172 8.67854 15.9202 8.20023C15.5502 6.37422 13.9345 5 12 5C10.0655 5 8.44979 6.37422 8.07977 8.20023C7.98284 8.67854 7.55482 9.01702 7.06706 9.0011C7.04476 9.00037 7.02241 9 7 9C5.89543 9 5 9.89543 5 11C5 12.1046 5.89543 13 7 13H8C8.55228 13 9 13.4477 9 14C9 14.5523 8.55228 15 8 15H7C4.79086 15 3 13.2091 3 11C3 9.02203 4.43567 7.37938 6.3218 7.05726Z"
-                          fill="#4F46E5"></path>
-                </svg>
-                <a href="/tabs/${title}"
-                   class="text-gray-700 dark:text-slate-400 text-base hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm">
-                    ${title}
-                </a>
-            </li>
-        `
-    }
-</script>
-
-<script type="text/javascript">
-    tailwind.config = {
-        darkMode: 'class'
-    }
-
-    function toggleDarkMode() {
-        document.querySelector('html').classList.toggle('dark')
-    }
-</script>
+<!--    fetch('./tablist.json')-->
+<!--        .then((response) => response.json())-->
+<!--        .then((json) => {-->
+<!--            for (const key in json) {-->
+<!--                addTab(key, json[key])-->
+<!--            }-->
+<!--        })-->
+<!--</script>-->
+<script type="module" crossorigin src="dist/build.js"></script>
 </body>
 
 </html>
