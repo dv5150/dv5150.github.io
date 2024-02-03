@@ -3,25 +3,17 @@ version: "3.8"
 services:
   nginx:
     image: nginx:1.25.1-alpine
-    container_name: portfolio-nginx
     volumes:
-      - ./img:/var/www/img
-      - ./js:/var/www/js
-      - ./tabs:/var/www/tabs
-      - ./index.html:/var/www/index.html
-      - ./tablist.json:/var/www/tablist.json
-      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./:/var/www
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     ports:
-      - "127.0.0.1:80:80"
+      - "127.0.0.1:8080:8080"
+    restart: unless-stopped
 
   build:
     build:
       context: ./php
       dockerfile: Dockerfile
-    container_name: portfolio-build
     volumes:
-      - ./tabs:/var/www/tabs
-      - ./tablist.json:/var/www/tablist.json
-      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
-      - ./build.php:/var/www/build.php
+      - ./:/var/www
     entrypoint: ['php', '/var/www/build.php']
