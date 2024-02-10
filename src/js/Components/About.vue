@@ -7,7 +7,7 @@ import { BriefcaseIcon, HomeIcon } from '@heroicons/vue/24/outline/index'
   <div class="container w-1/2 pt-4">
     <p class="mont-bold">Hello Visitor,</p>
     <p class="mont-bold text-4xl text-emerald-700 my-3">I'm David Szabados</p>
-    <p class="flex flex-row mb-3"><BriefcaseIcon class="h-6 w-6 text-emerald-700 mr-2" /> <span class="mr-4">Laravel Developer</span><HomeIcon class="h-6 w-6 text-emerald-700 mr-2" /> <span>Győr, Hungary</span></p>
+    <p class="flex flex-row mb-3"><BriefcaseIcon class="h-6 w-6 text-emerald-700 mr-2" /> <span class="mr-4 text-emerald-700">Laravel Developer</span><HomeIcon class="h-6 w-6 text-emerald-700 mr-2" /> <span class="text-emerald-700">Győr, Hungary</span></p>
     <p class="mont-thin text-emerald-950 text-lg">Software engineer, amateur musician, rabbit and video game enthusiast, who is building websites since 2016 and breaking guitar strings since 2009.</p>
     <p class="text-emerald-700 my-3">I love working with <span class="mont-bold">Laravel</span>, <span class="mont-bold">Docker</span>, <span class="mont-bold">Vue</span>, <span class="mont-bold">Pinia</span> and <span class="mont-bold">Tailwind</span></p>
     <p class="mont-thin">Other fancy buzzwords I'm more or less familiar with: <br> REST API, Redis, ElasticSearch, MySQL, Git, Nginx, Bootstrap</p>
