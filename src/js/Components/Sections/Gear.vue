@@ -7,7 +7,7 @@ import { MusicalNoteIcon } from '@heroicons/vue/24/outline/index'
     <div class="container w-1/4">
       <img class="w-100 rounded-lg" src="src/img/david-szabados-2.webp" alt="David Szabados">
     </div>
-    <div class="container w-3/4 px-6 pt-4">
+    <div class="container w-3/4 px-16 pt-4">
       <p class="text-emerald-700 text-4xl mb-3">Music and Gear</p>
       <p class="mont-thin text-emerald-900 text-lg mb-6">
         I have a passion for almost all kinds of guitar music, especially for <span class="mont-base">hardcore</span>, <span class="mont-base">modern metal</span> and <span class="mont-base">punk</span> mostly in Hungarian language alongside with <span class="mont-base">Celtic rock</span>.

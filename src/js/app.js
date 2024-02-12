@@ -13,7 +13,7 @@ import LastFmButton from './Components/Icons/LastFmButton.vue'
 import FacebookButton from './Components/Icons/FacebookButton.vue'
 
 import About from './Components/Sections/About.vue'
-import Guitar from './Components/Sections/Guitar.vue'
+import Gear from './Components/Sections/Gear.vue'
 
 import '../../dist/build.css'
 
@@ -30,6 +30,6 @@ app.component('LastFmButton', LastFmButton)
 app.component('FacebookButton', FacebookButton)
 
 app.component('About', About)
-app.component('Guitar', Guitar)
+app.component('Gear', Gear)
 
 app.mount('#app')
