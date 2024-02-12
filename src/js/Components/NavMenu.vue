@@ -4,6 +4,10 @@ const menuItems = {
     name: 'About Me',
     link: '#about'
   },
+  gear: {
+    name: 'Music and Gear',
+    link: '#gear'
+  },
   tabs: {
     name: 'Guitar Tabs',
     link: '#tabs'

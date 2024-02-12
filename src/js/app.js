@@ -12,7 +12,8 @@ import SpotifyButton from './Components/Icons/SpotifyButton.vue'
 import LastFmButton from './Components/Icons/LastFmButton.vue'
 import FacebookButton from './Components/Icons/FacebookButton.vue'
 
-import About from './Components/About.vue'
+import About from './Components/Sections/About.vue'
+import Guitar from './Components/Sections/Guitar.vue'
 
 import '../../dist/build.css'
 
@@ -29,5 +30,6 @@ app.component('LastFmButton', LastFmButton)
 app.component('FacebookButton', FacebookButton)
 
 app.component('About', About)
+app.component('Guitar', Guitar)
 
 app.mount('#app')
