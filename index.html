@@ -1,77 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="David Szabados">
-    <meta name="og:title" property="og:title" content="David Szabados">
-    <meta name="og:description" property="og:description" content="David Szabados">
-    <link rel="icon" href="rabbit.png" />
-    <script src="js/tailwind.js"></script>
-    <title>DV5150 | Guitar Tabs</title>
-</head>
-
-<body class="bg-neutral-950 py-6">
-    <div class="container mx-auto">
-        <div class="bg-neutral-900 rounded-lg">
-            <div class="flex flex-row border-b-2 border-dotted border-b-neutral-600 p-4 items-center">
-                <h5 class="text-white text-xl font-medium mr-auto">Guitar Tabs</h5>
-                <a href="https://www.facebook.com/dv5150fb/" target="_blank" data-tippy-content="@facebook_handle">
-                    <svg class="h-6 fill-current text-gray-300 hover:text-white"
-                        role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title>
-                        <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"></path>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Gitártabok">
+        <meta name="og:title" property="og:title" content="DV5150 | Gitártabok">
+        <meta name="og:description" property="og:description" content="Gitártabok">
+        <link rel="icon" href="rabbit.png" />
+        <script src="js/tailwind.js"></script>
+        <title>DV5150 | Gitártabok</title>
+    </head>
+    <body class="bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 min-h-screen">
+        <!-- Navigation -->
+        <nav class="sticky top-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
+            <div class="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <h1 class="text-2xl font-bold text-white">DV5150</h1>
+                </div>
+                <a href="https://www.facebook.com/dv5150fb/" target="_blank" class="text-neutral-400 hover:text-yellow-400 transition-colors" title="Follow on Facebook">
+                    <svg class="h-6 w-6 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"/>
                     </svg>
                 </a>
             </div>
-            <div class="flex p-4">
-                <div class="grid grid-cols-4 gap-2" id="tabList"></div>
+        </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 py-12">
+        <!-- Header Section -->
+        <div class="mb-10">
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-5">Gitártabok</h2>
+
+            <!-- Search and Filter -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                <div class="flex-1 relative">
+                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Keresés előadó vagy dalcím alapján..."
+                            class="w-full pl-10 pr-4 py-3 bg-neutral-800 text-white rounded-lg border border-neutral-700 focus:border-yellow-400 focus:outline-none transition-colors"
+                    />
+                </div>
+                <div class="flex gap-2">
+                    <button id="sortBtn" class="px-6 py-3 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg border border-neutral-700 transition-colors font-medium flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+                        </svg>
+                        <span class="hidden sm:inline">Sorrend</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Counter -->
+            <div class="text-neutral-400 text-sm mb-6">
+                <span id="resultCount">Betöltés...</span>
             </div>
         </div>
-    </div>
+
+        <!-- Tabs Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="tabList"></div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden text-center py-16">
+            <svg class="w-16 h-16 text-neutral-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="text-neutral-400 text-lg">Nincs találat.</p>
+        </div>
+    </main>
 
     <script type="text/javascript">
-        let tabList = [
-            "A Kir\u00e1ly Halott - Term\u00e9k Vagyok.gp",
+        const tabList = [
+            "A Király Halott - Termék Vagyok.gp",
             "Anchorless Bodies - Harag.gp",
-            "AWS - Hajnali J\u00e1rat.gp",
-            "AWS - Igazs\u00e1gvizsg\u00e1l\u00f3.gp",
-            "AWS - K\u00f6dd\u00e9 V\u00e1lsz.gp",
+            "AWS - Hajnali Járat.gp",
+            "AWS - Igazságvizsgáló.gp",
+            "AWS - Köddé Válsz.gp",
             "AWS - Mindenki Idegen.gp",
-            "AWS - Mindent a semmi\u00e9rt.gp",
-            "AWS - Nem k\u00e9rt\u00fcnk semmit.gp",
-            "AWS - Sorsforgat\u00f3.gp",
-            "AWS - Te is f\u00e9lsz.gp",
+            "AWS - Mindent a semmiért.gp",
+            "AWS - Nem kértünk semmit.gp",
+            "AWS - Sorsforgató.gp",
+            "AWS - Te is félsz.gp",
             "AWS - Temetetlen Halott.gp",
-            "AWS - \u00dajraj\u00e1tszan\u00e1m.gp",
+            "AWS - Újrajátszanám.gp",
             "Bajnoq - Nekem te nem vagy senkim.gp",
-            "Bankrupt - Hol van a p\u00e9nz.gp",
-            "BIPOLARIS - Az \u00c1cs.gp",
-            "Blahalouisiana - Ahol \u00d6ssze\u00e9r.gp",
-            "Blahalouisiana - T\u00fal T\u00e1vol, El\u00e9g K\u00f6zel.gp",
-            "BURNOUT - T\u00fal\u00e9l\u0151k.gp",
-            "Carson Coma - P\u00f3k.gp",
+            "Bankrupt - Hol van a pénz.gp",
+            "BIPOLARIS - Az Ács.gp",
+            "Blahalouisiana - Ahol Összeér.gp",
+            "Blahalouisiana - Túl Távol, Elég Közel.gp",
+            "BURNOUT - Túlélők.gp",
+            "Carson Coma - Pók.gp",
             "FAMINEHILL - Everlasting.gp",
             "FAMINEHILL - Jaded.gp",
             "Fiddler's Green - The Bog.gp",
             "Fiddler's Green - Victor And His Demons.gp",
             "Firkin - Firkinful Of Beer.gp",
-            "Fish - R\u00e9gen minden jobb volt.gp",
+            "Fish - Régen minden jobb volt.gp",
             "GUTALAX - Diarrhero.gp",
-            "HANOI - A legmagasabb erd\u0151.gp",
+            "HANOI - A legmagasabb erdő.gp",
             "Happy Ol'McWeasel - Irish Rover.gp",
-            "Hooligans - Kend\u0151zetlen igazs\u00e1g.gp",
-            "Intim Torna Illeg\u00e1l - Minden kedden.gp",
-            "Liberal Youth - Hib\u00e1s Vil\u00e1g (Beerzebub cover) feat. Berci.gp",
-            "Mudfield - \u00c1lmatlan.gp",
-            "Mudfield - F\u00e9reg.gp",
+            "Hooligans - Kendőzetlen igazság.gp",
+            "Intim Torna Illegál - Minden kedden.gp",
+            "Liberal Youth - Hibás Világ (Beerzebub cover) feat. Berci.gp",
+            "Mudfield - Álmatlan.gp",
+            "Mudfield - Féreg.gp",
             "Mudfield - Hajnali Idegen.gp",
             "Mudfield - Hold.gp",
-            "Mudfield - \u00daj Gener\u00e1ci\u00f3.gp",
-            "nemecsek - B\u00f6lcs\u0151 \u00e9s szemfed\u0151.gp",
-            "nemecsek - D\u00f3zsa.gp",
-            "nemecsek - Egys\u00e9gben, k\u00e9ts\u00e9gben, kisebbs\u00e9gben.gp",
-            "nemecsek - F\u00e1klya.gp",
+            "Mudfield - Új Generáció.gp",
+            "nemecsek - Bölcső és szemfedő.gp",
+            "nemecsek - Dózsa.gp",
+            "nemecsek - Egységben, kétségben, kisebbségben.gp",
+            "nemecsek - Fáklya.gp",
             "nemecsek - Ipatyev.gp",
             "Paddy and the Rats - Aerolites.gp",
             "Paddy and the Rats - After The Rain.gp",
@@ -101,57 +143,149 @@
             "Paddy and the Rats - The Way We Wanna Go.gp",
             "Paddy and the Rats - Wasteland.gp",
             "Paddy and the Rats - Where Red Paints The Ocean.gp",
-            "PETOFI - B\u00e1ny\u00e1k.gp",
-            "PETOFI - H\u00f3rusz.gp",
-            "PETOFI - K\u00e9sek.gp",
+            "PETOFI - Bányák.gp",
+            "PETOFI - Hórusz.gp",
+            "PETOFI - Kések.gp",
             "PETOFI - Komorebi.gp",
-            "PETOFI - Pusztul\u00e1s II.gp",
-            "PETOFI - R\u00e9veteg.gp",
-            "PETOFI - S\u00e1nta egyens\u00faly.gp",
-            "PETOFI - Szellemk\u00e9pek.gp",
-            "PETOFI - T\u00e9ltemet\u0151.gp",
+            "PETOFI - Pusztulás II.gp",
+            "PETOFI - Réveteg.gp",
+            "PETOFI - Sánta egyensúly.gp",
+            "PETOFI - Szellemképek.gp",
+            "PETOFI - Téltemető.gp",
             "PETOFI - Vigasztestek.gp",
             "ROAD - Ne mondd.gp",
             "STUBBORN - Black Bats.gp",
-            "T\u00e9veszme - Gy\u0171l\u00f6letbesz\u00e9d.gp",
-            "T\u00e9veszme - K\u00f6vek.gp",
-            "T\u00e9veszme - Lehunyja sok szem\u00e9t a h\u00e1z.gp",
+            "Téveszme - Gyűlöletbeszéd.gp",
+            "Téveszme - Kövek.gp",
+            "Téveszme - Lehunyja sok szemét a ház.gp",
             "The Clan - Tell Me Ma.gp",
-            "The Grenma - Csak \u00c1llunk \u00c9s N\u00e9z\u00fcnk.gp",
+            "The Grenma - Csak Állunk És Nézünk.gp",
             "The O'Reillys and the Paddyhats - Barrels Of Whiskey.gp",
             "The O'Reillys and the Paddyhats - Black And Tans.gp",
             "The O'Reillys and the Paddyhats - Irish Way.gp",
             "The O'Reillys and the Paddyhats feat. Fiddler's Green - Wake The Rebels.gp",
-            "USEME - A Test Az \u00c1rul\u00f3.gp",
-            "USEME - \u00c9lni V\u00e9gre.gp",
-        ]
+            "USEME - A Test Az Áruló.gp",
+            "USEME - Élni Végre.gp",
+        ];
 
-        for (const key in tabList) {
-            addTab(key, tabList[key])
+        let currentSort = 'asc';
+        let filteredTabs = [...tabList];
+
+        const searchInput = document.getElementById('searchInput');
+        const sortBtn = document.getElementById('sortBtn');
+        const tabListElement = document.getElementById('tabList');
+        const resultCountElement = document.getElementById('resultCount');
+        const emptyState = document.getElementById('emptyState');
+
+        // Initialize
+        renderTabs();
+
+        // Event Listeners
+        searchInput.addEventListener('input', handleSearch);
+        sortBtn.addEventListener('click', handleSort);
+
+        function handleSearch(e) {
+            const query = e.target.value.toLowerCase().trim();
+
+            if (query === '') {
+                filteredTabs = [...tabList];
+            } else {
+                filteredTabs = tabList.filter(tab =>
+                    tab.toLowerCase().includes(query)
+                );
+            }
+
+            renderTabs();
         }
 
-        function addTab (file, title) {
-            let tabListElement = document.querySelector('#tabList')
+        function handleSort() {
+            currentSort = currentSort === 'asc' ? 'desc' : 'asc';
+            filteredTabs.sort((a, b) => {
+                return currentSort === 'asc'
+                    ? a.localeCompare(b)
+                    : b.localeCompare(a);
+            });
+            renderTabs();
+            updateSortButtonState();
+        }
 
-            tabListElement.innerHTML = tabListElement.innerHTML + `
-                <div class="flex items-center bg-neutral-800 px-2 py-2.5 rounded-sm">
-                    <svg class="w-5 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path xmlns="http://www.w3.org/2000/svg" d="M12 10V20M12 20L9.5 17.5M12 20L14.5 17.5"
-                            stroke="#e5cd46" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                        <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M6.3218 7.05726C7.12925 4.69709 9.36551 3 12 3C14.6345 3 16.8708 4.69709 17.6782 7.05726C19.5643 7.37938 21 9.02203 21 11C21 13.2091 19.2091 15 17 15H16C15.4477 15 15 14.5523 15 14C15 13.4477 15.4477 13 16 13H17C18.1046 13 19 12.1046 19 11C19 9.89543 18.1046 9 17 9C16.9776 9 16.9552 9.00037 16.9329 9.0011C16.4452 9.01702 16.0172 8.67854 15.9202 8.20023C15.5502 6.37422 13.9345 5 12 5C10.0655 5 8.44979 6.37422 8.07977 8.20023C7.98284 8.67854 7.55482 9.01702 7.06706 9.0011C7.04476 9.00037 7.02241 9 7 9C5.89543 9 5 9.89543 5 11C5 12.1046 5.89543 13 7 13H8C8.55228 13 9 13.4477 9 14C9 14.5523 8.55228 15 8 15H7C4.79086 15 3 13.2091 3 11C3 9.02203 4.43567 7.37938 6.3218 7.05726Z"
-                            fill="#e5cd46"></path>
+        function updateSortButtonState() {
+            const icon = sortBtn.querySelector('svg');
+            if (currentSort === 'desc') {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function renderTabs() {
+            tabListElement.innerHTML = '';
+
+            if (filteredTabs.length === 0) {
+                emptyState.classList.remove('hidden');
+                resultCountElement.textContent = '0 találat';
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            resultCountElement.textContent = `${filteredTabs.length} találat`;
+
+            filteredTabs.forEach((tab) => {
+                const card = createTabCard(tab);
+                tabListElement.appendChild(card);
+            });
+        }
+
+        function createTabCard(title) {
+            const card = document.createElement('a');
+            card.href = `/tabs/${encodeURIComponent(title)}`;
+            card.className = `group relative overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg p-3 border border-neutral-700 hover:border-yellow-400 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/20 flex flex-col`;
+
+            // Extract artist and song name
+            const parts = title.replace('.gp', '').split(' - ');
+            const artist = parts[0] || 'Unknown';
+            const song = parts[1] || title.replace('.gp', '');
+
+            card.innerHTML = `
+        <!-- Background gradient on hover -->
+        <div class="absolute inset-0 bg-gradient-to-r from-yellow-400/0 to-yellow-400/0 group-hover:from-yellow-400/10 group-hover:to-yellow-400/5 transition-all duration-300"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 flex flex-col h-full">
+            <div class="flex flex-row mb-auto">
+                <!-- Text Content -->
+                <div class="flex-1 min-w-0">
+                    <p class="text-xs font-semibold text-yellow-400 uppercase tracking-wider mb-1">
+                        ${artist}
+                    </p>
+                    <h3 class="text-sm font-bold text-white group-hover:text-yellow-400 transition-colors line-clamp-2">
+                        ${song}
+                    </h3>
+                </div>
+
+                <!-- Icon -->
+                <div class="mb-2 flex-shrink-0">
+                    <svg fill="#fcc800" width="20px" height="20px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <title>music-notes</title>
+                        <path d="M29.439 1.392c-0.122-0.089-0.274-0.142-0.439-0.142-0.085 0-0.166 0.014-0.242 0.040l0.005-0.002-18.001 6c-0.3 0.103-0.513 0.383-0.513 0.712v14.554c-0.845-0.792-1.984-1.279-3.237-1.279-2.616 0-4.737 2.121-4.737 4.737s2.121 4.737 4.737 4.737c2.616 0 4.737-2.121 4.737-4.737 0-0.005 0-0.009-0-0.014v0.001-10.459l16.5-5.5v9.514c-0.845-0.792-1.984-1.279-3.237-1.279-2.616 0-4.737 2.121-4.737 4.737s2.121 4.737 4.737 4.737c2.616 0 4.737-2.121 4.737-4.737 0-0.005 0-0.009-0-0.014v0.001-21c0-0 0-0.001 0-0.001 0-0.249-0.121-0.47-0.308-0.606l-0.002-0.002zM7 29.25c-1.795 0-3.25-1.455-3.25-3.25s1.455-3.25 3.25-3.25c1.795 0 3.25 1.455 3.25 3.25v0c-0.002 1.794-1.456 3.248-3.25 3.25h-0zM11.75 8.541l16.5-5.5v5.418l-16.5 5.5zM25 26.25c-1.795 0-3.25-1.455-3.25-3.25s1.455-3.25 3.25-3.25c1.795 0 3.25 1.455 3.25 3.25v0c-0.001 1.794-1.456 3.249-3.25 3.25h-0z"></path>
                     </svg>
-                    <a href="/tabs/${title}"
-                    class="text-white hover:text-yellow-400 text-base transition-colors text-sm">
-                        ${title}
-                    </a>
-                </li>
-            `
-        }
+                </div>
+            </div>
+
+            <!-- Download Button -->
+            <div class="mt-2 flex items-center gap-2 text-yellow-400 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path xmlns="http://www.w3.org/2000/svg" d="M12 10V20M12 20L9.5 17.5M12 20L14.5 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M6.3218 7.05726C7.12925 4.69709 9.36551 3 12 3C14.6345 3 16.8708 4.69709 17.6782 7.05726C19.5643 7.37938 21 9.02203 21 11C21 13.2091 19.2091 15 17 15H16C15.4477 15 15 14.5523 15 14C15 13.4477 15.4477 13 16 13H17C18.1046 13 19 12.1046 19 11C19 9.89543 18.1046 9 17 9C16.9776 9 16.9552 9.00037 16.9329 9.0011C16.4452 9.01702 16.0172 8.67854 15.9202 8.20023C15.5502 6.37422 13.9345 5 12 5C10.0655 5 8.44979 6.37422 8.07977 8.20023C7.98284 8.67854 7.55482 9.01702 7.06706 9.0011C7.04476 9.00037 7.02241 9 7 9C5.89543 9 5 9.89543 5 11C5 12.1046 5.89543 13 7 13H8C8.55228 13 9 13.4477 9 14C9 14.5523 8.55228 15 8 15H7C4.79086 15 3 13.2091 3 11C3 9.02203 4.43567 7.37938 6.3218 7.05726Z" fill="currentColor"></path>
+                </svg>
+                <span>Download</span>
+            </div>
+        </div>
+    `;
+
+    return card;
+}
+
     </script>
 </body>
-
 </html>
